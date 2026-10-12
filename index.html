@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>Kynetic Playground</title>
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 40px;
+    }
+
+    .box {
+      width: 80px;
+      height: 80px;
+      background: #7659e8;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kynetic Playground</h1>
+
+  <div class="box"></div>
+  <button id="animate">Animate</button>
+
+  <script type="module">
+    import { kynetic } from "./src/index.js";
+
+    document
+      .querySelector("#animate")
+      .addEventListener("click", () => {
+        kynetic.to(".box", {
+          x: 300,
+          duration: 1.5,
+          ease: "easeOut"
+        });
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+# kynetic
+JavaScript animation library
